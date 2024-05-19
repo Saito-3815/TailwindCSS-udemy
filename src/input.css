@@ -2,3 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  scroll-behavior: smooth; /* スムーススクロール */
+}
+
+.secondary-title {
+  @apply text-3xl font-bold;
+}
+
+/* 擬似要素 */
+.secondary-title::before {
+  content: "";
+  @apply block w-12 h-2 bg-theme rounded-full mb-1;
+}
+
+.section-paragraph {
+  @apply text-secondary my-6 w-full max-w-3xl;
+}
+
+.badge {
+  @apply px-4 py-2 text-sm bg-badge;
+}
+
+/* 通常のCSSクラス */
+.easy-button {
+  padding: 8px 16px ;
+  background-color: #467ef7;
+  color: white;
+  border-radius: 4px;
+  font: bold;
+  margin-left: 40px;
+}
+
+.easy-button:hover {
+  background-color: #386ad6;
+}
+
+/* クラスの内容をまとめる */
+.btn {
+  @apply font-bold py-2 px-4 rounded ml-40;
+}
+
+.btn-blue {
+  @apply bg-blue-500 text-white;
+}
+
+.btn-blue:hover {
+  @apply bg-blue-600;
+}
